@@ -23,6 +23,7 @@ public class PageObjects {
 	@FindBy(xpath="//button[@class='vh79eN']")
 	public WebElement search;
 	
-	
+//	@FindBy(xpath="//div[@class='_4IiNRh _2mtkou' and @title='4 GB']")
+//	public WebElement checkbox;
 	
 }

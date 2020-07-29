@@ -1,13 +1,15 @@
 package com.Practise.Firstcode;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import java.lang.reflect.Method;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class SampleTest {
@@ -16,7 +18,7 @@ public class SampleTest {
 	
 	
 	
-	@BeforeClass
+	@BeforeTest
 	public void BrowserInvoke() throws InterruptedException {
 	
 	
@@ -41,13 +43,18 @@ public class SampleTest {
 				
 				PageObjects obj = new PageObjects(driver);
 				System.out.println(obj);
-				Thread.sleep(2000);
+//				Thread.sleep(2000);
 				System.out.println("Driver" + driver);
 				
 				obj.overlay.click();
 				
 				obj.textbox.sendKeys("Mobile");
 				obj.search.click();
+				
+//				WebElement checkbox1 = driver.findElement(By.xpath("//div[@class='_4IiNRh _2mtkou' and @title='4 GB']"));
+//				checkbox1.click();
+//				Thread.sleep(2000);
+//				obj.checkbox.click();
 			
 			
 //			WebElement textbox = driver.findElement(By.name("q"));
@@ -60,10 +67,10 @@ public class SampleTest {
 		
 		
 	}
-			@AfterClass
+			@AfterTest
 			public void Browserclose() {
 				
-//				driver.quit();
+				driver.quit();
 			}
 
 }
